@@ -1,6 +1,6 @@
 # Hash Set
 
-[Hash Set](https://en.wikipedia.org/wiki/Hash_table) implementation in pure C as an [stb-style single-file library](https://github.com/nothings/stb).
+[Hash Set](https://en.wikipedia.org/wiki/Set_(abstract_data_type)) implementation in pure C as an [stb-style single-file library](https://github.com/nothings/stb).
 
 ## Quick Start
 
