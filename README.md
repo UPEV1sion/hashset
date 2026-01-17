@@ -4,7 +4,7 @@
 
 ## Quick Start
 
-The library does not require any special building. You can simply copy-past [./hashset.h](./hashset.h) to your project an `#include` it.
+The library does not require any special building. You can simply copy-paste [./hashset.h](./hashset.h) to your project an `#include` it.
 
 ```c
 #define HASHSET_IMPLEMENTATION
@@ -14,9 +14,11 @@ int main(void)
 {
     hashset_t hs = {0};
 
-    hashset_insert(&hs, "Hello, World!", sizeof("Hello, World!"));
+    char msg[] = "Hello, World!";
 
-    puts(hashset_contains(&hs, "Hello, World!", sizeof("Hello, World!")) ? "true" : "false");
+    hashset_insert(&hs, msg, sizeof(msg));
+
+    puts(hashset_contains(&hs, msg, sizeof(msg)) ? "true" : "false");
     
     hashset_free(&hs);
 }
@@ -24,7 +26,7 @@ int main(void)
 
 ## Public API
 
-The library signals errors through an non-zero return code.
+The library signals errors through a non-zero return code.
 Mixing types is the caller's responsibility.
 
 ```c
@@ -51,5 +53,3 @@ _Before_ including the header file, the user can `#define` the following macros 
 Otherwise the above listed defaults will be used.
 
 If your code is a single source file, and you want to get rid of unused functions, you can `#define HSDEF static inline`, to let the compiler remove the unused functions.
-
-
